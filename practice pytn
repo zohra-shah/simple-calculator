@@ -1,0 +1,139 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/zohra-shah/simple-calculator/blob/main/practice%20pytn\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "fZM3pGSOGOSb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **practice session python # New Section**"
+      ],
+      "metadata": {
+        "id": "hEKheNycGSaX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Simple Calculator\n",
+        "\n",
+        "def add(x, y):\n",
+        "    return x + y\n",
+        "\n",
+        "def subtract(x, y):\n",
+        "    return x - y\n",
+        "\n",
+        "def multiply(x, y):\n",
+        "    return x * y\n",
+        "\n",
+        "def divide(x, y):\n",
+        "    if y != 0:\n",
+        "        return x / y\n",
+        "    else:\n",
+        "        return \"Cannot divide by zero!\"\n",
+        "\n",
+        "def calculator():\n",
+        "    print(\"Select operation:\")\n",
+        "    print(\"1. Add\")\n",
+        "    print(\"2. Subtract\")\n",
+        "    print(\"3. Multiply\")\n",
+        "    print(\"4. Divide\")\n",
+        "\n",
+        "    while True:\n",
+        "        choice = input(\"Enter choice (1/2/3/4): \")\n",
+        "\n",
+        "        if choice in ['1', '2', '3', '4']:\n",
+        "            num1 = float(input(\"Enter first number: \"))\n",
+        "            num2 = float(input(\"Enter second number: \"))\n",
+        "\n",
+        "            if choice == '1':\n",
+        "                print(f\"{num1} + {num2} = {add(num1, num2)}\")\n",
+        "            elif choice == '2':\n",
+        "                print(f\"{num1} - {num2} = {subtract(num1, num2)}\")\n",
+        "            elif choice == '3':\n",
+        "                print(f\"{num1} * {num2} = {multiply(num1, num2)}\")\n",
+        "            elif choice == '4':\n",
+        "                print(f\"{num1} / {num2} = {divide(num1, num2)}\")\n",
+        "\n",
+        "            # Check if the user wants to continue\n",
+        "            next_calculation = input(\"Do you want to perform another calculation? (yes/no): \")\n",
+        "            if next_calculation.lower() != 'yes':\n",
+        "                break\n",
+        "        else:\n",
+        "            print(\"Invalid input. Please enter a number between 1 and 4.\")\n",
+        "\n",
+        "# Run the calculator\n",
+        "calculator()\n"
+      ],
+      "metadata": {
+        "id": "HLR0j2NuGlMm",
+        "outputId": "859f4719-c2b0-4d20-c81f-cea5c54e6120",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Select operation:\n",
+            "1. Add\n",
+            "2. Subtract\n",
+            "3. Multiply\n",
+            "4. Divide\n",
+            "Enter choice (1/2/3/4): 3\n",
+            "Enter first number: 100\n",
+            "Enter second number: 50\n",
+            "100.0 * 50.0 = 5000.0\n",
+            "Do you want to perform another calculation? (yes/no): yes\n",
+            "Enter choice (1/2/3/4): 4\n",
+            "Enter first number: 8\n",
+            "Enter second number: 6\n",
+            "8.0 / 6.0 = 1.3333333333333333\n",
+            "Do you want to perform another calculation? (yes/no): yes\n",
+            "Enter choice (1/2/3/4): 2\n",
+            "Enter first number: 87\n",
+            "Enter second number: 85\n",
+            "87.0 - 85.0 = 2.0\n",
+            "Do you want to perform another calculation? (yes/no): yes\n",
+            "Enter choice (1/2/3/4): 1\n",
+            "Enter first number: 50\n",
+            "Enter second number: 0\n",
+            "50.0 + 0.0 = 50.0\n",
+            "Do you want to perform another calculation? (yes/no): no\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
