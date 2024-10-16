@@ -1,0 +1,43 @@
+import streamlit as st
+import math
+
+# Title of the app
+st.title("Scientific Calculator")
+
+# Operation selection
+st.header("Select an operation:")
+operation = st.selectbox(
+    "Choose an operation:",
+    ("Addition", "Subtraction", "Multiplication", "Division", "Exponentiation", "Square Root", "Sine", "Cosine", "Tangent")
+)
+
+# Input for numbers
+num1 = st.number_input("Enter first number:", value=0.0)
+if operation in ("Addition", "Subtraction", "Multiplication", "Division", "Exponentiation"):
+    num2 = st.number_input("Enter second number:", value=0.0)
+
+# Calculation based on the selected operation
+if st.button("Calculate"):
+    if operation == "Addition":
+        result = num1 + num2
+    elif operation == "Subtraction":
+        result = num1 - num2
+    elif operation == "Multiplication":
+        result = num1 * num2
+    elif operation == "Division":
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            result = "Error: Division by zero!"
+    elif operation == "Exponentiation":
+        result = math.pow(num1, num2)
+    elif operation == "Square Root":
+        result = math.sqrt(num1)
+    elif operation == "Sine":
+        result = math.sin(num1)
+    elif operation == "Cosine":
+        result = math.cos(num1)
+    elif operation == "Tangent":
+        result = math.tan(num1)
+
+    st.write(f"Result: {result}")
